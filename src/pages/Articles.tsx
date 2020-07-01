@@ -6,26 +6,28 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-
-import "./Articles.css";
+import { strings } from "../localization/localization";
 
 const Articles: React.FC = () => {
   const [articles, setArticles] = useState([]);
+  
   useEffect(() => {
     const fetchArticles = async () => {
       let articles = await (
         await fetch(`http://13.90.214.197:8089/articles`)
       ).json();
       setArticles(articles);
-      console.log(articles);
+     
     };
     fetchArticles();
   }, []);
+
+  console.log(articles);
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Articles</IonTitle>
+          <IonTitle>{strings.main.articles}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>

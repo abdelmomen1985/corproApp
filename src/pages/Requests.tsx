@@ -6,6 +6,7 @@ import {
   IonTitle,
   IonContent,
 } from "@ionic/react";
+import { strings } from "../localization/localization";
 
 export default function Requests() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Requests() {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Requests</IonTitle>
+          <IonTitle>{strings.main.requests}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent></IonContent>

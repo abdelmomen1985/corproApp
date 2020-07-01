@@ -7,20 +7,20 @@ import {
   IonToolbar,
 } from "@ionic/react";
 
+import {setLanguage, strings} from '../localization/localization'; 
+
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Home</IonTitle>
+          <IonTitle>{strings.main.home}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+
+        <button onClick={setLanguage}>Change Language</button>
+        
       </IonContent>
     </IonPage>
   );
