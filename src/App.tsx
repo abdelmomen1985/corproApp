@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  IonApp
+  IonApp, IonSplitPane, IonPage
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 
@@ -24,6 +24,7 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import Router from './router';
+import SideMenu from "./components/SideMenu";
 
 const App: React.FC = () => {
 
@@ -35,8 +36,15 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <Router />
+        <IonSplitPane contentId="main">
+          <SideMenu />
+          <IonPage id="main">
+            <Router />
+          </IonPage>
+        </IonSplitPane>
       </IonReactRouter>
+
+
     </IonApp>
   )
 };

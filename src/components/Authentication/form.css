@@ -17,12 +17,12 @@
 }
 
 .input {
+   height: 55px
+}
 
-   max-width: 300px;
-   margin-left: auto;
-   margin-right: auto;
-   border-radius: 5px;
-   height: 50px
+.item {
+    border-radius: 10px;
+    height: 55px;
 }
 
 .column {

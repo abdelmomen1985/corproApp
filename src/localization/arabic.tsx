@@ -15,12 +15,20 @@ const main = {
     articles: "المقالات",
     login: "تسجيل الدخول",
     register: "تسجيل حساب جديد",
-    settings: "الاعدادات"
+    settings: "الاعدادات",
+    careers: 'الوظائف'
+}
+
+const career = {
+    jobDescription: 'المسمى الوظيفى',
+    requirements: 'المتطلبات',
+    apply: 'قدم الآن'
 }
 
 const arabic = {
     auth: auth,
-    main: main
+    main: main,
+    career: career
 };
 
 export default arabic

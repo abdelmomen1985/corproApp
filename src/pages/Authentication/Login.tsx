@@ -5,6 +5,8 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonMenuButton,
+  IonMenu,
 } from "@ionic/react";
 
 // Form
@@ -45,6 +47,7 @@ export default function Login(props: any) {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonMenuButton slot="start"/>
           <IonTitle>{strings.main.login}</IonTitle>
         </IonToolbar>
       </IonHeader>

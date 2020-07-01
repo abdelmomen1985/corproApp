@@ -5,6 +5,7 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonMenuButton,
 } from "@ionic/react";
 
 // Form
@@ -43,6 +44,7 @@ export default function Register(props: any) {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonMenuButton slot="start"/>
           <IonTitle>{strings.main.register}</IonTitle>
         </IonToolbar>
       </IonHeader>

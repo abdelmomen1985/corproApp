@@ -1,9 +1,7 @@
-import { home } from "ionicons/icons";
-
 const auth = {
     login: "Login",
     submit: "Submit",
-    email: "Email Address",
+    email: "Email",
     password: "Password",
     username: "Username",
     registerRedirect: "Don't have an account? Register",
@@ -15,13 +13,21 @@ const main = {
     requests: "Requests",
     articles: "Articles",
     login: "Login",
+    careers: "Careers",
     register: "Register",
     settings: "Settings"
+};
+
+const career = {
+    jobDescription: 'Job Description',
+    requirements: 'Requirements',
+    apply: 'Apply Now'
 }
 
 const english = {
+    main: main,
     auth: auth,
-    main: main
+    career: career
 };
 
 export default english

@@ -9,17 +9,17 @@ import {
 } from "@ionic/react";
 import { strings } from "../localization/localization";
 
-export default function Requests() {
+export default function JobApp() {
   
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonMenuButton slot="start" />
-          <IonTitle>{strings.main.requests}</IonTitle>
+          <IonTitle>Job Application</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent></IonContent>
+      <IonContent> Job Application Here</IonContent>
     </IonPage>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "@ionic/react";
 import './form.css'
 import { Link } from 'react-router-dom';
+import { strings } from '../../localization/localization';
 
 interface RegisterFormProps {
     handleSubmit: (email: string, password: string, username: string) => any,
@@ -17,6 +18,8 @@ interface RegisterFormProps {
 }
 
 export default function RegisterForm(props: RegisterFormProps) {
+
+    const constants = strings.auth;
 
     const onSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
@@ -33,7 +36,7 @@ export default function RegisterForm(props: RegisterFormProps) {
             <IonRow>
                 <IonCol className="column title">
                     <IonText className="title">
-                        <h1>Register</h1>
+                        <h1>{strings.main.register}</h1>
                     </IonText>
                 </IonCol>
             </IonRow>
@@ -42,7 +45,7 @@ export default function RegisterForm(props: RegisterFormProps) {
                 <IonCol className="column link">
                     <IonText color="primary">
                         <Link to='/login' className="link">
-                            <p>Already have an account? Login</p>
+                            <p>{constants.loginRedirect}</p>
                         </Link>
                     </IonText>
                 </IonCol>
@@ -51,8 +54,7 @@ export default function RegisterForm(props: RegisterFormProps) {
             <IonRow>
                 <IonCol className="column">
                     <IonItem>
-                        <IonLabel position='floating'>Username</IonLabel>
-                        <IonInput name="username" type="text" />
+                        <IonInput className="input" name="username" type="text" placeholder={constants.username} />
                     </IonItem>
                 </IonCol>
             </IonRow>
@@ -60,8 +62,7 @@ export default function RegisterForm(props: RegisterFormProps) {
             <IonRow>
                 <IonCol className="column">
                     <IonItem>
-                        <IonLabel position='floating'>Email</IonLabel>
-                        <IonInput name="email" type="text" />
+                        <IonInput className="input" name="email" type="text" placeholder={constants.email} />
                     </IonItem>
                 </IonCol>
             </IonRow>
@@ -69,8 +70,9 @@ export default function RegisterForm(props: RegisterFormProps) {
             <IonRow>
                 <IonCol className="column">
                     <IonItem>
-                        <IonLabel position='floating'>Password</IonLabel>
                         <IonInput
+                            placeholder={constants.password}
+                            className="input"
                             name="password"
                             type="password"
                         />
@@ -90,7 +92,7 @@ export default function RegisterForm(props: RegisterFormProps) {
 
             <IonRow className="column">
                 <IonCol>
-                    <IonButton className="column" type="submit">Submit</IonButton>
+                    <IonButton className="column" type="submit">{constants.submit}</IonButton>
                 </IonCol>
             </IonRow>
 

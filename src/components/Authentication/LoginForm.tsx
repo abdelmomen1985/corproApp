@@ -53,18 +53,19 @@ export default function LoginForm(props: LoginFormProps) {
 
             <IonRow>
                 <IonCol className="column">
-                    <IonItem>
-                        <IonLabel position='floating'>{constants.email}</IonLabel>
-                        <IonInput name="email" type="text" />
+                    <IonItem className='item'>
+            
+                        <IonInput className='input' name="email" type="text" placeholder={constants.email}/>
                     </IonItem>
                 </IonCol>
             </IonRow>
 
             <IonRow>
                 <IonCol className="column">
-                    <IonItem>
-                        <IonLabel position='floating'>{constants.password}</IonLabel>
+                    <IonItem className='item'>
                         <IonInput
+                            className='input'
+                            placeholder={constants.password}
                             name="password"
                             type="password"
                         />

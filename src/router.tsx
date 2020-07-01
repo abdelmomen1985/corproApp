@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Register from './pages/Authentication/Register';
 import Articles from "./pages/Articles";
 import { Route, Redirect  } from 'react-router';
-import {home, card, call, logIn } from "ionicons/icons";
+import {home, card, logIn, briefcase } from "ionicons/icons";
 
 import { strings } from './localization/localization';
 
@@ -20,6 +20,9 @@ import {
     IonTabs,
   } from "@ionic/react";
 
+import Careers from './pages/Careers';
+import JobApp from './pages/JobApp';
+
 const Router: React.FC = () => {
 
     const constants = strings.main;
@@ -27,12 +30,14 @@ const Router: React.FC = () => {
         <IonTabs>
 
             {/* Router */}
-            <IonRouterOutlet>
+            <IonRouterOutlet >
                 <Route path="/home" component={Home} exact={true} />
                 <Route path="/articles" component={Articles} />
                 <Route path="/login" component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path="/requests" component={Requests} />
+                <Route path='/careers' component={Careers} />
+                <Route path='/application/:careerId' component={JobApp} />
                 <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
             </IonRouterOutlet>
 
@@ -49,9 +54,9 @@ const Router: React.FC = () => {
                     <IonLabel>{constants.articles}</IonLabel>
                 </IonTabButton>
 
-                <IonTabButton tab="requests" href="/requests">
-                    <IonIcon icon={call} />
-                    <IonLabel>{constants.requests}</IonLabel>
+                <IonTabButton tab="careers" href="/careers">
+                    <IonIcon icon={briefcase} />
+                    <IonLabel>{constants.careers}</IonLabel>
                 </IonTabButton>
                 
                 <IonTabButton tab="login" href="/login">

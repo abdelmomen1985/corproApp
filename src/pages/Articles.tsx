@@ -5,19 +5,20 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonMenuButton,
 } from "@ionic/react";
 import { strings } from "../localization/localization";
 
 const Articles: React.FC = () => {
   const [articles, setArticles] = useState([]);
-  
+
   useEffect(() => {
     const fetchArticles = async () => {
       let articles = await (
         await fetch(`http://13.90.214.197:8089/articles`)
       ).json();
       setArticles(articles);
-     
+
     };
     fetchArticles();
   }, []);
@@ -27,15 +28,12 @@ const Articles: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+          <IonMenuButton slot="start" />
           <IonTitle>{strings.main.articles}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Articles</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+   
         <div>{/* Put articles here*/}</div>
       </IonContent>
     </IonPage>
