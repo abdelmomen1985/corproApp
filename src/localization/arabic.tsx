@@ -22,7 +22,14 @@ const main = {
 const career = {
     jobDescription: 'المسمى الوظيفى',
     requirements: 'المتطلبات',
-    apply: 'قدم الآن'
+    apply: 'قدم الآن',
+    application: 'الطلب',
+    jobApplication: 'طلب وظيفى',
+    cvUpload: 'اضافة السيرة الذاتية',
+    fullName: 'الاسم',
+    phone: "رقم الهاتف",
+    email: 'البريد الالكترونى',
+    submit: 'ارسال'
 }
 
 const arabic = {

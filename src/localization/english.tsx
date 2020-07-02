@@ -21,7 +21,14 @@ const main = {
 const career = {
     jobDescription: 'Job Description',
     requirements: 'Requirements',
-    apply: 'Apply Now'
+    apply: 'Apply Now',
+    application: 'Application',
+    jobApplication: 'Job Application',
+    cvUpload: 'Upload CV',
+    fullName: 'Full Name',
+    phone: "Phone Number",
+    email: "Email Address",
+    submit: 'Submit'
 }
 
 const english = {

@@ -54,7 +54,7 @@ export default function CareerModal(props: CareerModalProps) {
 
                         <IonButton onClick={props.closeModal}
                             expand='block' style={{ marginTop: 16 }}
-                            routerLink='/application/1'>
+                            routerLink={`/application/${career?.id}`}>
                             {constants.apply}
                             </IonButton>
                     </IonCardContent>

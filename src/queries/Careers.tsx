@@ -1,4 +1,4 @@
-import { Get } from './helpers';
+import { Get, Post } from './helpers';
 import config from '../config';
 
 const url = config.API_URL;
@@ -7,4 +7,8 @@ const GetCareers = async () => {
     return await Get(url + '/careers', {});
 };
 
-export { GetCareers };
+const PostApplication = async (payload: object) => {
+    return await Post(url + '/job-applications', payload, {headers: {'content-type': 'multipart/form-data'}});
+};
+
+export { GetCareers, PostApplication };
