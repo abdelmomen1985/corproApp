@@ -24,8 +24,14 @@
   color: #b4b4b4 !important;
 }
 
-.article-page-card-content {
+@media (prefers-color-scheme: dark) {
+  .article-page-card-content {
     color: rgb(212, 212, 212);
+  }
+}
+
+.article-page-card-content {
+   
     margin: 14px;
     font-size: 16px
 }
