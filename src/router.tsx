@@ -5,7 +5,8 @@ import Login from "./pages/Authentication/Login";
 import Requests from "./pages/Requests";
 import Home from "./pages/Home";
 import Register from './pages/Authentication/Register';
-import Articles from "./pages/Articles";
+import Articles from "./pages/Articles/Articles";
+import Article from './pages/Articles/Article';
 import { Route, Redirect  } from 'react-router';
 import {home, card, logIn, briefcase } from "ionicons/icons";
 
@@ -20,8 +21,8 @@ import {
     IonTabs,
   } from "@ionic/react";
 
-import Careers from './pages/Careers';
-import JobApp from './pages/JobApp';
+import Careers from './pages/Careers/Careers';
+import JobApp from './pages/Careers/JobApp';
 
 const Router: React.FC = () => {
 
@@ -32,6 +33,7 @@ const Router: React.FC = () => {
             {/* Router */}
             <IonRouterOutlet >
                 <Route path="/home" component={Home} exact={true} />
+                <Route path='/article/:articleId' component={Article} />
                 <Route path="/articles" component={Articles} />
                 <Route path="/login" component={Login} />
                 <Route path='/register' component={Register} />

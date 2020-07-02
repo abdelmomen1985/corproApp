@@ -8,13 +8,13 @@ import {
     IonMenuButton,
     IonLoading,
 } from "@ionic/react";
-import { strings } from "../localization/localization";
+import { strings } from "../../localization/localization";
 
 // HTTP Request
-import { GetCareers } from '../queries/Careers';
-import CareerCard from "../components/Careers/CareerCard";
-import CareerModal from "../components/Careers/CareerModal";
-import Career from "../types/Career";
+import { GetCareers } from '../../queries/Careers';
+import CareerCard from "../../components/Careers/CareerCard";
+import CareerModal from "../../components/Careers/CareerModal";
+import Career from "../../types/Career";
 
 export default function Careers() {
     const [careers, setCareers] = useState<Array<Career>>([]);

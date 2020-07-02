@@ -1,0 +1,32 @@
+.article-page-card{
+    width: 105% !important;
+    position:relative;
+    margin-left: -8px;
+    margin-top: -9px
+  }
+
+.article-page-card-image{
+    width:100%;
+    height:100%;
+    filter: brightness(70%);
+    margin-bottom: -5px
+  }
+
+.article-page-card-overlay {
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    bottom: 12px;
+    color: #fff;
+}
+
+.article-page-card-sub-title {
+  color: #b4b4b4 !important;
+}
+
+.article-page-card-content {
+    color: rgb(212, 212, 212);
+    margin: 14px;
+    font-size: 16px
+}
+

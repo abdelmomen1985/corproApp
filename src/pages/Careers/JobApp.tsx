@@ -9,9 +9,9 @@ import {
   IonProgressBar,
   IonToast,
 } from "@ionic/react";
-import { strings } from "../localization/localization";
-import AppForm from "../components/Careers/AppForm";
-import { PostApplication } from "../queries/Careers";
+import { strings } from "../../localization/localization";
+import AppForm from "../../components/Careers/AppForm";
+import { PostApplication } from "../../queries/Careers";
 
 export default function JobApp(props: any) {
   const [error, setError] = useState<string | null>(null);
