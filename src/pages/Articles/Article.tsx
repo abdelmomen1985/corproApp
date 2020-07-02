@@ -14,6 +14,7 @@ const url = config.API_URL;
 export default function ArticlePage(props: any) {
   const [loading, setLoading] = useState<boolean>(false);
   const [article, setArticle] = useState<Article | null>();
+  const lang = localStorage.getItem("lang");
 
   const articleId = props.match.params.articleId;
 
@@ -42,7 +43,7 @@ export default function ArticlePage(props: any) {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonCard className='article-page-card'>
+        <IonCard className='article-page-card' style={lang === 'en' ? {marginLeft: -8} : {marginRight: -8}}>
           <img
             className='article-page-card-image'
             src={url + article?.media[0].url}

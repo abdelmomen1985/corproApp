@@ -15,8 +15,10 @@ interface ArticleCardProps {
 }
 
 export default function ArticleCard(props: ArticleCardProps) {
+  const lang = localStorage.getItem('lang')
     return (
-        <IonCard className='article-card' routerLink={'/article/' + props.id}>
+        <IonCard className='article-card' routerLink={'/article/' + props.id} 
+        style={lang === 'en' ? {marginLeft: -8} : {marginRight: -8}}>
         <img className='article-image' src={url + props.imageUrl} />
        
         <IonCardHeader className="overlay">
