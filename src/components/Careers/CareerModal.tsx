@@ -20,7 +20,6 @@ export default function CareerModal(props: CareerModalProps) {
     const constants = strings.career;
     const career: Career | undefined = props.career;
 
-    console.log(career?.requirements)
     return (
         <IonModal
             isOpen={props.open}

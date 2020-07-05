@@ -15,9 +15,11 @@ import LoginForm from '../../components/Authentication/LoginForm';
 // HTTP Request
 import {SignInMutation} from '../../queries/Authentication';
 import { strings } from "../../localization/localization";
+import { AppCtxt } from "../../setup/Context";
 
 export default function Login(props: any) {
   const [error, setError] = useState<string|null>(null);
+  const { checkAuth } = React.useContext(AppCtxt);
 
   const handleSubmit = (email: string, password: string) => {
     const payload = {
@@ -30,9 +32,11 @@ export default function Login(props: any) {
 
     SignInMutation(payload).then(result => {
       setError(null);
+     
 
       // Store the jwt in the local storage
       localStorage.setItem('auth', result.jwt);
+      checkAuth();
 
       // Redirect to home page
       props.history.push('/home');

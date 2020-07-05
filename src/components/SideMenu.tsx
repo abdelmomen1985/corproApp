@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonMenuToggle, IonIcon, IonLabel, IonItem } from "@ionic/react";
 import { RouteComponentProps, withRouter } from 'react-router';
 
-import {home, card, call, logIn, create, briefcase, pricetag } from "ionicons/icons";
+import { home, card, call, logIn, create, briefcase, pricetag, person } from "ionicons/icons";
 import { strings } from '../localization/localization';
+import { AppCtxt, CtxtProvider } from "../setup/Context";
+import { act } from 'react-dom/test-utils';
 
 interface Page {
     title: string;
@@ -13,33 +15,52 @@ interface Page {
 
 const constants = strings.main
 
-const pages: Page[] = [
+var pages: Page[] = [
     { title: constants.home, path: '/', icon: home },
-    { title: constants.careers, path: '/careers', icon: briefcase},
+    { title: constants.careers, path: '/careers', icon: briefcase },
     { title: constants.articles, path: '/articles', icon: card },
-    { title: constants.products, path: '/products', icon: pricetag},
-    { title: constants.requests, path:'/requests', icon: call},
-    { title: constants.login, path: '/login', icon: logIn},
-    { title: constants.register, path: '/register', icon: create}
+    { title: constants.products, path: '/products', icon: pricetag },
+    { title: constants.requests, path: '/requests', icon: call },
 ];
 
 type Props = RouteComponentProps<{}>;
 
 const SideMenu = ({ history }: Props) => {
     const [activePage, setActivePage] = useState(pages[0].title);
+    const { user } = React.useContext(AppCtxt);
 
-    const renderMenuItems = (): JSX.Element[] => {
-        return pages.map((page: Page) => (
-            <IonMenuToggle key={page.title} auto-hide="false">
+    // Auth related page elements
+    const authPages: Page[] = !user ? [
+        { title: constants.login, path: '/login', icon: logIn },
+        { title: constants.register, path: '/register', icon: create }
+    ] : [{title: user?.username, path:'/profile', icon: person }]
+    
+
+    const MenuItem = (page: any) => {
+        const item = page.page
+        return (
+            <IonMenuToggle key={item.title} auto-hide="false">
                 <IonItem button
-                    color={page.title === activePage ? 'primary' : ''}
-                    onClick={() => navigateToPage(page)}>
-                    <IonIcon slot="start" icon={page.icon}></IonIcon>
+                    color={item.title === activePage ? 'primary' : ''}
+                    onClick={() => navigateToPage(item)}>
+                    <IonIcon slot="start" icon={item.icon}></IonIcon>
                     <IonLabel>
-                        {page.title}
+                        {item.title}
                     </IonLabel>
                 </IonItem>
             </IonMenuToggle>
+        )
+    }
+
+    const renderMenuItems = (): JSX.Element[] => {
+        return pages.map((page: Page) => (
+            <MenuItem page={page} />
+        ));
+    }
+
+    const renderAuthItems = (): JSX.Element[] => {
+        return authPages.map((page: Page) => (
+            <MenuItem page={page} />
         ));
     }
 
@@ -49,12 +70,13 @@ const SideMenu = ({ history }: Props) => {
     }
 
     return (
-        <IonMenu contentId="main" style={{maxWidth: 300, border: 'none'}} maxEdgeStart={-5}>
+        <IonMenu contentId="main" style={{ maxWidth: 300, border: 'none' }} maxEdgeStart={-5}>
             <IonHeader>
             </IonHeader>
             <IonContent >
-                <IonList style={{marginTop: 50}}>
-                    { renderMenuItems() }
+                <IonList style={{ marginTop: 50 }}>
+                    {renderMenuItems()}
+                    {renderAuthItems()}
                 </IonList>
             </IonContent>
         </IonMenu>

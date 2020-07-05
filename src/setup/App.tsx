@@ -22,16 +22,23 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
+import "../theme/variables.css";
 import Router from './router';
-import SideMenu from "./components/SideMenu";
+import SideMenu from "../components/SideMenu";
+import { AppCtxt } from "./Context";
 
 const App: React.FC = () => {
+  const { checkAuth } = React.useContext(AppCtxt);
 
   useEffect(() => {
     const currentLanguage = localStorage.getItem('lang');
     document.body.style.direction = currentLanguage === "en" ? "ltr" : "rtl";
   }, []);
+
+  // Check auth on router change
+  useEffect(() => {
+    checkAuth()
+  }, [])
 
   return (
     <IonApp>

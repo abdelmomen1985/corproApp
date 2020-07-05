@@ -1,16 +1,16 @@
 import React from 'react';
 
 // Page Components
-import Login from "./pages/Authentication/Login";
-import Requests from "./pages/Requests";
-import Home from "./pages/Home";
-import Register from './pages/Authentication/Register';
-import Articles from "./pages/Articles/Articles";
-import Article from './pages/Articles/Article';
+import Login from "../pages/Authentication/Login";
+import Requests from "../pages/Requests";
+import Home from "../pages/Home";
+import Register from '../pages/Authentication/Register';
+import Articles from "../pages/Articles/Articles";
+import Article from '../pages/Articles/Article';
 import { Route, Redirect  } from 'react-router';
 import {home, card, logIn, briefcase } from "ionicons/icons";
 
-import { strings } from './localization/localization';
+import { strings } from '../localization/localization';
 
 import {
     IonIcon,
@@ -21,10 +21,10 @@ import {
     IonTabs,
   } from "@ionic/react";
 
-import Careers from './pages/Careers/Careers';
-import JobApp from './pages/Careers/JobApp';
-import Products from './pages/Products';
-import ProductModal from './components/Products/ProductModal';
+import Careers from '../pages/Careers/Careers';
+import JobApp from '../pages/Careers/JobApp';
+import Products from '../pages/Products';
+import ProductModal from '../components/Products/ProductModal';
 
 const Router: React.FC = () => {
 

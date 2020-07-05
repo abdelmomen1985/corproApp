@@ -1,7 +1,8 @@
-import { Post } from './helpers';
+import { Post, Get } from './helpers';
 import config from '../config';
 
 const url = config.API_URL;
+
 
 const SignInMutation = async (payload: object) => {
     return await Post(url + '/auth/local', payload, {});
@@ -10,4 +11,9 @@ const SignInMutation = async (payload: object) => {
 const RegisterMutation = async (payload: object) => {
     return await Post(url + '/auth/local/register', payload, {});
 };
-export { SignInMutation, RegisterMutation };
+
+const CheckAuth = async () => {
+    const token = localStorage.getItem('auth');
+    return await Get(url + '/users/me', {headers: {Authorization: `Bearer ${token}`}})
+}
+export { SignInMutation, RegisterMutation, CheckAuth };

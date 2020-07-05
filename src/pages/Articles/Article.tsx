@@ -33,8 +33,6 @@ export default function ArticlePage(props: any) {
 
   }, [articleId]);
 
-  console.log(article?.content)
-
  
   return (
     <IonPage>
