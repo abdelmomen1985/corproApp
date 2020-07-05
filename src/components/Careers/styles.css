@@ -1,0 +1,19 @@
+.career-modal-card{
+    width: 105% !important;
+    position:relative;
+    margin-top: -9px;
+    margin-bottom: 0px;
+}
+
+.career-modal-title{
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+
+.career-modal-content {
+    margin-right: 24px;
+    margin-left: 24px;
+    font-size: 15px;
+}

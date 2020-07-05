@@ -5,7 +5,7 @@ const url = config.API_URL;
 
 // Get all articles
 const GetArticles = async () => {
-    return await Get(url + '/posts?post_type=2', {});
+    return await Get(url + '/posts?post_type=2&_sort=created_at:DESC', {});
 };
 
 // Get one article using its ID

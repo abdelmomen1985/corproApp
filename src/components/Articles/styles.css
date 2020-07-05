@@ -21,5 +21,15 @@
     color: #fff;
 }
 
+.article-sub-title {
+  color: #c7c7c7 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article-sub-title {
+    color: rgb(212, 212, 212) !important;
+  }
+}
+
 
 

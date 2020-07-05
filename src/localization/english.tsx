@@ -12,6 +12,8 @@ const main = {
     home: "Home",
     requests: "Requests",
     articles: "Articles",
+    products: "Products",
+    product: "Product",
     login: "Login",
     careers: "Careers",
     register: "Register",

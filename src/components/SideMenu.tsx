@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonMenuToggle, IonIcon, IonLabel, IonItem } from "@ionic/react";
 import { RouteComponentProps, withRouter } from 'react-router';
 
-import {home, card, call, logIn, create, briefcase } from "ionicons/icons";
+import {home, card, call, logIn, create, briefcase, pricetag } from "ionicons/icons";
 import { strings } from '../localization/localization';
 
 interface Page {
@@ -17,6 +17,7 @@ const pages: Page[] = [
     { title: constants.home, path: '/', icon: home },
     { title: constants.careers, path: '/careers', icon: briefcase},
     { title: constants.articles, path: '/articles', icon: card },
+    { title: constants.products, path: '/products', icon: pricetag},
     { title: constants.requests, path:'/requests', icon: call},
     { title: constants.login, path: '/login', icon: logIn},
     { title: constants.register, path: '/register', icon: create}

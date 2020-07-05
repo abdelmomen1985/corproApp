@@ -23,6 +23,8 @@ import {
 
 import Careers from './pages/Careers/Careers';
 import JobApp from './pages/Careers/JobApp';
+import Products from './pages/Products';
+import ProductModal from './components/Products/ProductModal';
 
 const Router: React.FC = () => {
 
@@ -35,6 +37,8 @@ const Router: React.FC = () => {
                 <Route path="/home" component={Home} exact={true} />
                 <Route path='/article/:articleId' component={Article} />
                 <Route path="/articles" component={Articles} />
+                <Route path='/product/:id' component={ProductModal} />
+                <Route path ='/products' component={Products} />
                 <Route path="/login" component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path="/requests" component={Requests} />

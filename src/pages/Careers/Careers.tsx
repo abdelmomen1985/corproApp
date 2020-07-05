@@ -19,7 +19,7 @@ import Career from "../../types/Career";
 export default function Careers() {
     const [careers, setCareers] = useState<Array<Career>>([]);
     const [modal, setModal] = useState<boolean>(false);
-    const [selectedCareer, setSelectedCareer] = useState<any>();
+    const [selectedCareer, setSelectedCareer] = useState<Career>();
     const [loading, setLoading] = useState<boolean>(false);
 
     // Get all careers once the component mounts
@@ -34,10 +34,11 @@ export default function Careers() {
     }, []);
 
     // Open Career Modal
-    const openModal = (career: any) => {
+    const openModal = (career: Career) => {
         setSelectedCareer(career);
         setModal(true)
     }
+    
 
     return (
         <IonPage>

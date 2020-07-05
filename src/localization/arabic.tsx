@@ -13,6 +13,8 @@ const main = {
     home: "الرئيسية",
     requests: "الطلبات",
     articles: "المقالات",
+    products: "المنتجات",
+    product: "المنتج",
     login: "تسجيل الدخول",
     register: "تسجيل حساب جديد",
     settings: "الاعدادات",

@@ -1,0 +1,24 @@
+.product-modal-card{
+    width: 105% !important;
+    position:relative;
+    margin-top: -9px;
+    margin-bottom: 0px;
+}
+
+.product-modal-content {
+    margin-right: 24px;
+    margin-left: 24px;
+    font-size: 15px;
+    color: rgb(56, 56, 56);
+}
+
+.product-modal-title {
+    margin-left: 8px;
+    margin-bottom: -8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .product-modal-content {
+        color: rgb(212, 212, 212);
+    }
+}

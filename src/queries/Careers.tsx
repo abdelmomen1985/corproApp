@@ -4,7 +4,7 @@ import config from '../config';
 const url = config.API_URL;
 
 const GetCareers = async () => {
-    return await Get(url + '/careers', {});
+    return await Get(url + '/careers?_sort=created_at:DESC', {});
 };
 
 const PostApplication = async (payload: object) => {
