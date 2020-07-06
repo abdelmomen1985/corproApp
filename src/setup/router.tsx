@@ -2,7 +2,7 @@ import React from 'react';
 
 // Page Components
 import Login from "../pages/Authentication/Login";
-import Requests from "../pages/Requests";
+import Requests from "../pages/Requests/Requests";
 import Home from "../pages/Home";
 import Register from '../pages/Authentication/Register';
 import Articles from "../pages/Articles/Articles";
@@ -25,6 +25,7 @@ import Careers from '../pages/Careers/Careers';
 import JobApp from '../pages/Careers/JobApp';
 import Products from '../pages/Products';
 import ProductModal from '../components/Products/ProductModal';
+import RequestPage from '../pages/Requests/NewRequest';
 
 const Router: React.FC = () => {
 
@@ -42,6 +43,7 @@ const Router: React.FC = () => {
                 <Route path="/login" component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path="/requests" component={Requests} />
+                <Route path='/new-request' component={RequestPage} />
                 <Route path='/careers' component={Careers} />
                 <Route path='/application/:careerId' component={JobApp} />
                 <Route path="/" render={() => <Redirect to="/home" />} exact={true} />

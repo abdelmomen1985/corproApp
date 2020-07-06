@@ -26,7 +26,10 @@ export default function JobApp(props: any) {
     setLoading(true);
 
     // Input Validation
-    if (!email || !name || !phone || !file.files[0]) return setError("All fields are required");
+    if (!email || !name || !phone || !file.files[0]) {
+      setLoading(false);
+      return setError("All fields are required");
+    }
     else setError(null);
 
     const formData = new FormData();

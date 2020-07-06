@@ -34,10 +34,22 @@ const career = {
     submit: 'ارسال'
 }
 
+const request = {
+    email: "البريد الالكترونى",
+    name: "الاسم بالكامل",
+    request: "الطلب",
+    submit: 'ارسال',
+    missingFieldError: 'برجاء ملىء جميع الخانات',
+    successToast: "تم ارسال الطلب بنجاح"
+}
+
+
 const arabic = {
     auth: auth,
     main: main,
-    career: career
+    career: career,
+    request: request
+
 };
 
 export default arabic

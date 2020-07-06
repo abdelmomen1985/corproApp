@@ -33,10 +33,20 @@ const career = {
     submit: 'Submit'
 }
 
+const request = {
+    email: "Email Addres",
+    name: "Full Name",
+    request: "Request",
+    submit: "Submit",
+    missingFieldError: "Please make sure that all fields are filled",
+    successToast: "Your request has been submitted successfully"
+}
+
 const english = {
     main: main,
     auth: auth,
-    career: career
+    career: career,
+    request: request
 };
 
 export default english

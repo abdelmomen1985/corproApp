@@ -5,7 +5,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 import { home, card, call, logIn, create, briefcase, pricetag, person } from "ionicons/icons";
 import { strings } from '../localization/localization';
 import { AppCtxt, CtxtProvider } from "../setup/Context";
-import { act } from 'react-dom/test-utils';
+
 
 interface Page {
     title: string;
@@ -39,7 +39,7 @@ const SideMenu = ({ history }: Props) => {
     const MenuItem = (page: any) => {
         const item = page.page
         return (
-            <IonMenuToggle key={item.title} auto-hide="false">
+            <IonMenuToggle auto-hide="false">
                 <IonItem button
                     color={item.title === activePage ? 'primary' : ''}
                     onClick={() => navigateToPage(item)}>
@@ -53,14 +53,14 @@ const SideMenu = ({ history }: Props) => {
     }
 
     const renderMenuItems = (): JSX.Element[] => {
-        return pages.map((page: Page) => (
-            <MenuItem page={page} />
+        return pages.map((page: Page, index: number) => (
+            <MenuItem page={page} key={index} />
         ));
     }
 
     const renderAuthItems = (): JSX.Element[] => {
-        return authPages.map((page: Page) => (
-            <MenuItem page={page} />
+        return authPages.map((page: Page, index: number) => (
+            <MenuItem page={page} key={index}/>
         ));
     }
 

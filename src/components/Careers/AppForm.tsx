@@ -6,17 +6,9 @@ import {
     IonRow,
     IonText,
     IonItem,
-    IonLabel,
 } from "@ionic/react";
 import '../Authentication/form.css'
 import { strings } from '../../localization/localization';
-
-import { PostApplication } from '../../queries/Careers';
-
-// interface AppFormProps {
-//     handleSubmit: (email: string, password: string) => any,
-//     error: string | null
-// }
 
 export default function AppForm(props: any) {
     const constants = strings.career;
