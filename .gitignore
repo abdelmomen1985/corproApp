@@ -11,6 +11,9 @@
 # production
 /build
 
+# igoner android by momen
+/android
+
 # misc
 .DS_Store
 .env.local

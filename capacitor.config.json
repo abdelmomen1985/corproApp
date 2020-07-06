@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "io.ionic.corproApp",
   "appName": "corproApp",
   "bundledWebRuntime": false,
   "npmClient": "npm",
