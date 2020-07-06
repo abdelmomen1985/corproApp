@@ -37,7 +37,7 @@ export default function CareerModal(props: CareerModalProps) {
             </IonHeader>
 
             <IonContent>
-                <IonCard className="career-modal-card" style={currentLang === 'en' ? {marginLeft: -8} : {marginRight: -8}}>
+                <IonCard className="career-modal-card" style={currentLang === 'en' ? { marginLeft: -8 } : { marginRight: -8 }}>
                     <IonCardHeader className='career-modal-title'>
                         <IonCardSubtitle>{career?.type}</IonCardSubtitle>
                         <IonCardTitle>{career?.title}</IonCardTitle>
@@ -48,9 +48,9 @@ export default function CareerModal(props: CareerModalProps) {
                             <ReactMarkdown source={career?.description} />
                         </IonText>
 
-                        <IonText>
-                            <h1 style={{ paddingTop: 16, paddingBottom: 16 }}>{constants.requirements}</h1>
-                        </IonText>
+
+                        <h1 className='career-modal-bold' style={{ paddingTop: 16, paddingBottom: 16 }}>{constants.requirements}</h1>
+
 
                         <IonText>
                             <ReactMarkdown source={career?.requirements} />

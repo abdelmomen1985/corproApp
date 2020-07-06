@@ -4,6 +4,8 @@ type Request = {
     email: string,
     content: string,
     created_at: Date,
+    response: string,
+    status: number
 }
 
 export default Request;
