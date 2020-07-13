@@ -1,5 +1,6 @@
 import React from 'react';
 import { IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonCardTitle } from '@ionic/react';
+import ReactMarkdown from 'react-markdown';
 
 interface CareerCardProps {
     id: number,
@@ -19,7 +20,7 @@ export default function CareerCard(props: CareerCardProps) {
             </IonCardHeader>
 
             <IonCardContent>
-                {props.description}
+                <ReactMarkdown source={props.description} escapeHtml={false} />
             </IonCardContent>
         </IonCard>
     )

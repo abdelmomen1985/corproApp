@@ -56,7 +56,7 @@ export default function ProductModal(props: Props) {
                     </IonCardHeader>
 
                         <div>
-                            <ReactMarkdown className="product-modal-content" source={product?.content} />
+                            <ReactMarkdown className="product-modal-content" source={product?.content} escapeHtml={false}  />
                         </div>
 
                 </div>

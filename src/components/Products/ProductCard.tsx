@@ -36,7 +36,7 @@ export default function ProductCard({ product, onClick }: Props) {
                 <IonCardTitle>{product.title}</IonCardTitle>
             </IonCardHeader>
             <IonCardContent>
-                <ReactMarkdown source={content} />
+                <ReactMarkdown source={content} escapeHtml={false} />
             </IonCardContent>
         </IonCard>
     )

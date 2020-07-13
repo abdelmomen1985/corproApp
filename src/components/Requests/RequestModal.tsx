@@ -58,7 +58,7 @@ export default function RequestModal(props: RequestModalProps) {
 
                                 <h1 className='request-modal-bold' style={{ paddingTop: 16, paddingBottom: 16 }}>Response</h1>
                                 <IonText>
-                                    <ReactMarkdown source={request?.response} />
+                                    <ReactMarkdown source={request?.response} escapeHtml={false} />
                                 </IonText>
                             </>
                         )}

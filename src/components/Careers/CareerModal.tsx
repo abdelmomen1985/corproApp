@@ -45,7 +45,7 @@ export default function CareerModal(props: CareerModalProps) {
 
                     <div className='career-modal-content'>
                         <IonText>
-                            <ReactMarkdown source={career?.description} />
+                            <ReactMarkdown source={career?.description} escapeHtml={false} />
                         </IonText>
 
 
@@ -53,7 +53,7 @@ export default function CareerModal(props: CareerModalProps) {
 
 
                         <IonText>
-                            <ReactMarkdown source={career?.requirements} />
+                            <ReactMarkdown source={career?.requirements} escapeHtml={false} />
                         </IonText>
 
                         <IonButton onClick={props.closeModal}
