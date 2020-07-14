@@ -57,7 +57,7 @@ export default function ArticlePage(props: any) {
         </IonCard>
 
         <div>
-        <ReactMarkdown className="article-page-card-content" source={article?.content} escapeHtml={true}/>
+        <ReactMarkdown className="article-page-card-content" source={article?.content} escapeHtml={false}/>
         </div>
         <IonLoading isOpen={loading} message={'Please wait...'} />
 
