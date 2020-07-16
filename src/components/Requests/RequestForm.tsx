@@ -7,8 +7,8 @@ export default function RequestForm(props: any) {
 
     const onSubmit = (e: SyntheticEvent) => {
         e.preventDefault();
-        const { email, name, request, submit } = e.target as any;
-        props.handleSubmit(email.value, name.value, request.value);
+        const { email, name, title, request } = e.target as any;
+        props.handleSubmit(email.value, name.value, title.value, request.value);
     };
 
     return (
@@ -47,8 +47,18 @@ export default function RequestForm(props: any) {
 
             <IonRow>
                 <IonCol className="column">
+                    <IonItem className='item'>
+                        <IonInput
+                            className='input' placeholder={constants.title} name="title" type="text"
+                        />
+                    </IonItem>
+                </IonCol>
+            </IonRow>
+
+            <IonRow>
+                <IonCol className="column">
                     <IonItem className='item' style={{ height: 'fit-content' }}>
-                        <IonTextarea rows={6} cols={20} name='request' placeholder={constants.request}></IonTextarea>
+                        <IonTextarea rows={6} cols={20} name='request' placeholder={constants.content}></IonTextarea>
                     </IonItem>
                 </IonCol>
             </IonRow>

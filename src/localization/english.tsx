@@ -37,6 +37,8 @@ const request = {
     email: "Email Addres",
     name: "Full Name",
     request: "Request",
+    content: "Request Content",
+    title: "Request Title",
     submit: "Submit",
     missingFieldError: "Please make sure that all fields are filled",
     successToast: "Your request has been submitted successfully"

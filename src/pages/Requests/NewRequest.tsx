@@ -12,24 +12,26 @@ export default function RequestPage(props: any) {
 
     const constants = strings.request;
 
-    const handleSubmit = (email: string, senderName: string, content: string) => {
+    const handleSubmit = (email: string, senderName: string, title: string, content: string) => {
         let payload: object = {
             email,
             sender_name: senderName,
-            content, 
+            content,
+            title,
             user: user ? user.id : null
         };
         
         // Inputs' validation
-        if (!email || !senderName || !content) return setErrors([constants.missingFieldError]);
+        if (!email || !senderName || !title || !content) return setErrors([constants.missingFieldError]);
         else setErrors([])
 
         // HTTP Post request
-        PostRequest(payload).then((result) => {
+        PostRequest(payload).then(() => {
             setErrors([]);
             setToast(true);
             props.history.push('/requests')
         }).catch(err => {
+            console.log(err)
             const data = err.data.data.errors;
             let errors = [];
 

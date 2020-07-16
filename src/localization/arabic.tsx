@@ -38,6 +38,8 @@ const request = {
     email: "البريد الالكترونى",
     name: "الاسم بالكامل",
     request: "الطلب",
+    content: "محتوى الطلب",
+    title: "عنوان الطلب",
     submit: 'ارسال',
     missingFieldError: 'برجاء ملىء جميع الخانات',
     successToast: "تم ارسال الطلب بنجاح"
