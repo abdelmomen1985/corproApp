@@ -43,9 +43,9 @@ export default function ProductModal(props: Props) {
                 <div className='product-modal-card' style={currentLang === 'en' ? {marginLeft: -8} : {marginRight: -8}}>
                   
                     <IonSlides pager={true} onIonSlidesDidLoad={function(this: any){this.update()}}>
-                        {product?.media.map((img, index) => (
+                        {product?.image_data.map((data, index) => (
                             <IonSlide key={index}>
-                                <img src={url + img.url} onLoad={() => setLoading(false)} />
+                                <img src={url + data.image?.url} onLoad={() => setLoading(false)} alt={data.alt} />
                             </IonSlide>
                         ))}
                     </IonSlides>

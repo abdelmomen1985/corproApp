@@ -3,7 +3,7 @@ type Article = {
     title: string,
     content: string,
     created_at: Date,
-    media: Array<any>
+    image_data: Array<any>
 }
 
 export default Article;

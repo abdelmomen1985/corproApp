@@ -49,7 +49,7 @@ const Articles: React.FC = (props: any) => {
             key={index}
             title={article.title}
             date={article.created_at}
-            imageUrl={article.media[0].url} /> 
+            imageUrl={article.image_data[0]?.image?.url} /> 
         ))}
 
       </IonContent>

@@ -24,9 +24,9 @@ export default function ProductCard({ product, onClick }: Props) {
     return (
         <IonCard style={{cursor: 'pointer'}} onClick={onClick}>
             <IonSlides pager={true}>
-                {product.media.map((img, index) => (
+                {product.image_data.map((data, index) => (
                     <IonSlide key={index}>
-                        <img src={url + img.url} />
+                        <img src={url + data.image?.url} alt={data.alt} />
                     </IonSlide>
                 ))}
             </IonSlides>

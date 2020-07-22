@@ -46,7 +46,7 @@ export default function ArticlePage(props: any) {
         <IonCard className='article-page-card' style={lang === 'en' ? {marginLeft: -8} : {marginRight: -8}}>
           <img
             className='article-page-card-image'
-            src={url + article?.media[0].url}
+            src={url + article?.image_data[0]?.image?.url}
             onLoad={() => setLoading(false)} />
 
           <IonCardHeader className="article-page-card-overlay">

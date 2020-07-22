@@ -4,7 +4,7 @@ type Product = {
     content: string,
     post_data: Array<any>,
     created_at: Date,
-    media: Array<any>
+    image_data: Array<any>
 }
 
 export default Product;
